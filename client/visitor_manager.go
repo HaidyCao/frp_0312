@@ -19,8 +19,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fatedier/frp/models/config"
-	"github.com/fatedier/frp/utils/xlog"
+	"github.com/fatedier/frp_0312/models/config"
+	"github.com/fatedier/frp_0312/utils/xlog"
 )
 
 type VisitorManager struct {

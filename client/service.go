@@ -25,14 +25,14 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/fatedier/frp/assets"
-	"github.com/fatedier/frp/models/config"
-	"github.com/fatedier/frp/models/msg"
-	"github.com/fatedier/frp/utils/log"
-	frpNet "github.com/fatedier/frp/utils/net"
-	"github.com/fatedier/frp/utils/util"
-	"github.com/fatedier/frp/utils/version"
-	"github.com/fatedier/frp/utils/xlog"
+	"github.com/fatedier/frp_0312/assets"
+	"github.com/fatedier/frp_0312/models/config"
+	"github.com/fatedier/frp_0312/models/msg"
+	"github.com/fatedier/frp_0312/utils/log"
+	frpNet "github.com/fatedier/frp_0312/utils/net"
+	"github.com/fatedier/frp_0312/utils/util"
+	"github.com/fatedier/frp_0312/utils/version"
+	"github.com/fatedier/frp_0312/utils/xlog"
 
 	fmux "github.com/hashicorp/yamux"
 )
@@ -62,7 +62,7 @@ type Service struct {
 	// This is configured by the login response from frps
 	serverUDPPort int
 
-	exit     uint32 // 0 means not exit
+	exit uint32 // 0 means not exit
 
 	// service context
 	ctx context.Context
@@ -94,7 +94,6 @@ func NewService(cfg config.ClientCommonConf, pxyCfgs map[string]config.ProxyConf
 		pxyCfgs:     pxyCfgs,
 		visitorCfgs: visitorCfgs,
 		exit:        0,
-		closedCh:    make(chan bool),
 		ctx:         xlog.NewContext(ctx, xlog.New()),
 		cancel:      cancel,
 	}
@@ -152,11 +151,13 @@ func (svr *Service) Run(isCmd bool) error {
 
 	svr.closed = false
 	if isCmd {
-		svr.closed = <-svr.ctx.Done()
+		<-svr.ctx.Done()
+		svr.closed = true
 		log.Info("svr closed")
 	} else {
 		go func() {
-			svr.closed = <-svr.ctx.Done()
+			<-svr.ctx.Done()
+			svr.closed = true
 			log.Info("svr closed")
 
 			if svr.onClosedListener != nil {

@@ -10,9 +10,9 @@ import "C"
 import (
 	"os"
 
-	"github.com/fatedier/frp/cmd/frpc/sub"
-	"github.com/fatedier/frp/cmd/frps/frps"
-	"github.com/fatedier/frp/utils/version"
+	"github.com/fatedier/frp_0312/cmd/frpc/sub"
+	"github.com/fatedier/frp_0312/cmd/frps/frps"
+	"github.com/fatedier/frp_0312/utils/version"
 )
 
 //export StopFrpc

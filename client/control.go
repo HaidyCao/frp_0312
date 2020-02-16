@@ -17,17 +17,18 @@ package client
 import (
 	"context"
 	"crypto/tls"
+	"github.com/fatedier/frp_0312/utils/log"
 	"io"
 	"net"
 	"runtime/debug"
 	"sync"
 	"time"
 
-	"github.com/fatedier/frp/client/proxy"
-	"github.com/fatedier/frp/models/config"
-	"github.com/fatedier/frp/models/msg"
-	frpNet "github.com/fatedier/frp/utils/net"
-	"github.com/fatedier/frp/utils/xlog"
+	"github.com/fatedier/frp_0312/client/proxy"
+	"github.com/fatedier/frp_0312/models/config"
+	"github.com/fatedier/frp_0312/models/msg"
+	frpNet "github.com/fatedier/frp_0312/utils/net"
+	"github.com/fatedier/frp_0312/utils/xlog"
 
 	"github.com/fatedier/golib/control/shutdown"
 	"github.com/fatedier/golib/crypto"
@@ -78,7 +79,7 @@ type Control struct {
 	mu sync.RWMutex
 
 	ProxyFunc func(err error)
-	xl *xlog.Logger
+	xl        *xlog.Logger
 
 	// service context
 	ctx context.Context

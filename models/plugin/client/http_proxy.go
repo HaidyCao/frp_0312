@@ -22,7 +22,7 @@ import (
 	"net/http"
 	"strings"
 
-	frpNet "github.com/fatedier/frp/utils/net"
+	frpNet "github.com/fatedier/frp_0312/utils/net"
 
 	frpIo "github.com/fatedier/golib/io"
 	gnet "github.com/fatedier/golib/net"

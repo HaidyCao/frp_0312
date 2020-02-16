@@ -21,8 +21,8 @@ import (
 
 	ini "github.com/vaughan0/go-ini"
 
-	plugin "github.com/fatedier/frp/models/plugin/server"
-	"github.com/fatedier/frp/utils/util"
+	plugin "github.com/fatedier/frp_0312/models/plugin/server"
+	"github.com/fatedier/frp_0312/utils/util"
 )
 
 // ServerCommonConf contains information for a server service. It is

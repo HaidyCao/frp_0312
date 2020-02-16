@@ -26,13 +26,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/fatedier/frp/models/config"
-	"github.com/fatedier/frp/models/msg"
-	plugin "github.com/fatedier/frp/models/plugin/client"
-	"github.com/fatedier/frp/models/proto/udp"
-	"github.com/fatedier/frp/utils/limit"
-	frpNet "github.com/fatedier/frp/utils/net"
-	"github.com/fatedier/frp/utils/xlog"
+	"github.com/fatedier/frp_0312/models/config"
+	"github.com/fatedier/frp_0312/models/msg"
+	plugin "github.com/fatedier/frp_0312/models/plugin/client"
+	"github.com/fatedier/frp_0312/models/proto/udp"
+	"github.com/fatedier/frp_0312/utils/limit"
+	frpNet "github.com/fatedier/frp_0312/utils/net"
+	"github.com/fatedier/frp_0312/utils/xlog"
 
 	"github.com/fatedier/golib/errors"
 	frpIo "github.com/fatedier/golib/io"
@@ -260,7 +260,7 @@ func newAddress(addr string, port int) string {
 	}
 }
 
-func (pxy *XtcpProxy) InWorkConn(conn frpNet.Conn, m *msg.StartWorkConn) {
+func (pxy *XtcpProxy) InWorkConn(conn net.Conn, m *msg.StartWorkConn) {
 	xl := pxy.xl
 	defer conn.Close()
 	var natHoleSidMsg msg.NatHoleSid

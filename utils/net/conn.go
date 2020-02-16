@@ -24,7 +24,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/fatedier/frp/utils/xlog"
+	"github.com/fatedier/frp_0312/utils/xlog"
 	gnet "github.com/fatedier/golib/net"
 	kcp "github.com/fatedier/kcp-go"
 )
