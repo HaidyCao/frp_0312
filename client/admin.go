@@ -19,8 +19,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/fatedier/frp_0312/assets"
-	frpNet "github.com/fatedier/frp_0312/utils/net"
+	"github.com/HaidyCao/frp_0312/assets"
+	frpNet "github.com/HaidyCao/frp_0312/utils/net"
 
 	"github.com/gorilla/mux"
 )

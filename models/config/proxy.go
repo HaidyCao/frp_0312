@@ -20,9 +20,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/fatedier/frp_0312/models/consts"
-	"github.com/fatedier/frp_0312/models/msg"
-	"github.com/fatedier/frp_0312/utils/util"
+	"github.com/HaidyCao/frp_0312/models/consts"
+	"github.com/HaidyCao/frp_0312/models/msg"
+	"github.com/HaidyCao/frp_0312/utils/util"
 
 	ini "github.com/vaughan0/go-ini"
 )

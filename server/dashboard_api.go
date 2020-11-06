@@ -18,10 +18,10 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/fatedier/frp_0312/models/config"
-	"github.com/fatedier/frp_0312/models/consts"
-	"github.com/fatedier/frp_0312/utils/log"
-	"github.com/fatedier/frp_0312/utils/version"
+	"github.com/HaidyCao/frp_0312/models/config"
+	"github.com/HaidyCao/frp_0312/models/consts"
+	"github.com/HaidyCao/frp_0312/utils/log"
+	"github.com/HaidyCao/frp_0312/utils/version"
 
 	"github.com/gorilla/mux"
 )
